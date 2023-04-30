@@ -2,7 +2,13 @@
 	import Card from './components/card.svelte';
 </script>
 
-<div class="flex flex-row justify-center m-3 flex-wrap w-full">
+<div class="mt-8 flex h-full flex-row flex-wrap justify-center pb-11">
+	<Card />
+	<Card />
+	<Card />
+	<Card />
+	<Card />
+	<Card />
 	<Card />
 	<Card />
 </div>

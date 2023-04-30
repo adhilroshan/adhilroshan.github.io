@@ -1,4 +1,7 @@
 <script>
+	import AnimatedHamburgerMenu from './AnimatedHamburgerMenu.svelte';
+	import { fly } from 'svelte/transition';
+
 	let navItems = [
 		{
 			title: 'Home',
@@ -13,33 +16,39 @@
 			url: '/blog'
 		}
 	];
+
+	export let open = false;
+	export let onClick = () => {
+		open = !open;
+	};
 </script>
 
-<nav class="bg-black/30  backdrop-blur-lg sticky top-0 z-50">
+<nav class="sticky top-3 z-50 mx-auto h-[10vh] w-11/12 rounded-lg bg-heroBg/20 backdrop-blur-md">
 	<div class="flex flex-row">
-		<div class="flex flex-row  w-full justify-start ">
+		<div class="flex w-full flex-row justify-start">
 			<!-- TODO: Profile -->
-			<h1
-				class="flex w-full text-xl font-mono  justify-center rounded-lg px-3 py-2 text-slate-700 font-medium  my-2 "
+			<a
+				href="/"
+				class="my-2 flex w-full justify-center rounded-lg px-3 py-2 font-mono text-xl font-medium text-white/60"
 			>
 				Adhil Roshan
-			</h1>
+			</a>
 		</div>
-		<div class="flex w-full justify-center">
+		<div class="hidden w-full justify-center md:flex">
 			<!-- {navItems.map(([title, url]) => ( -->
 			{#each navItems as navItem}
 				<a
 					href={navItem.url}
-					class="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:opacity-80 my-2 hover:text-slate-900"
+					class="my-2 rounded-lg px-3 py-2 font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-900 hover:opacity-80"
 					>{navItem.title}</a
 				>
 			{/each}
 			<!-- ))} -->
 		</div>
-		<div class="flex  w-full justify-end ">
+		<div class=" hidden w-full items-center justify-end md:flex">
 			<!-- TODO: Navbar -->
 			<button
-				class="w-4 h-4 m-1 mr-5 rounded-lg py-2 text-slate-700 font-medium  hover:opacity-80 my-2 hover:text-slate-300"
+				class="m-1 my-2 mr-5 h-4 w-4 rounded-lg font-medium text-slate-700 hover:text-slate-300 hover:opacity-80"
 				on:click
 			>
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
@@ -49,5 +58,23 @@
 				>
 			</button>
 		</div>
+		<div class=" flex w-full justify-end md:hidden">
+			<AnimatedHamburgerMenu {open} {onClick} />
+		</div>
 	</div>
+	{#if open}
+		<div
+			class="absolute mt-2 flex w-full flex-col items-center gap-4 rounded-lg bg-white/20 p-2 backdrop-blur-lg"
+			transition:fly={{ x: 200, duration: 400 }}
+		>
+			{#each navItems as navItem}
+				<a
+					on:click={onClick}
+					href={navItem.url}
+					class="my-2 w-5/6 rounded-lg px-3 py-2 text-center font-medium text-yellow-200 transition-transform hover:transform hover:bg-slate-400"
+					>{navItem.title}</a
+				>
+			{/each}
+		</div>
+	{/if}
 </nav>
