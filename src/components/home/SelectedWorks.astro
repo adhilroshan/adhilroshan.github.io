@@ -1,5 +1,6 @@
 ---
-let projects = [
+import projects from "../../data/projects.json"
+let projectn = [
   {
     id: "project1",
     link: "/project/paytime-wallet",
@@ -47,31 +48,29 @@ let projects = [
               <div role="listitem" class="work-block-wrapper w-dyn-item group">
                 <div class="work-block">
                   <a
-                    href={project.link}
+                    href={`/project/${project.slug}`}
                     class="work-block-link-wrapper w-inline-block"
                   >
                     <div class="work-block-image-wrapper ">
                       <img
-                        transition:name={`work-block-image-${project.id}`}
-                        alt={project.alt}
+                        transition:name={`work-block-image-${project.slug}`}
+                        alt={project.projectTitle}
                         loading="lazy"
-                        src={project.imageSrc}
-                        sizes={project.imageSizes}
-                        srcset={project.imageSrcSet}
+                        src={project.projectImageUrl}
                         class="work-block-image group-hover:scale-125 transition-all ease-in-out duration-300"
                       />
                     </div>
                   </a>
                   <a
-                    data-w-id="f15fb4de-5ad7-a67e-c90a-185a8ad6e9e4"
-                    href={project.link}
+                    // data-w-id="f15fb4de-5ad7-a67e-c90a-185a8ad6e9e4"
+                    href={`/project/${project.slug}`}
                     class="work-block-text-wrapper w-inline-block"
                   >
                     <h2
                       class="thumbnail-title"
-                      transition:name={`work-title-${project.id}`}
+                      transition:name={`work-title-${project.slug}`}
                     >
-                      {project.title}
+                      {project.projectTitle}
                     </h2>
                     <div class="work-block-para-wrapper">
                       <p class="paragraph-small">{project.description}</p>

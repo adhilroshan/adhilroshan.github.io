@@ -2,52 +2,90 @@
 import type { GetStaticPaths } from "astro";
 import { type CollectionEntry, getCollection } from "astro:content";
 import "../../styles/projects.css";
-export const getStaticPaths = () => {
-  return [
-    {
-      params: {
-        slug: "paytime-wallet",
-      },
-    },
-  ];
-};
-
-// const {slug}= Astro.params;
 
 import Layout from "../../layouts/Layout.astro";
+import projects from "../../data/projects.json";
 
-let projectTitle = "Paytime Wallet";
-let role = "Development";
-let projectType = "Mobile App";
-let projectYear = "2023";
+export const getStaticPaths = () => {
+  projects.map((project) => {
+    return {
+      params: {
+        slug: project.slug,
+      },
+    };
+  });
+};
+const {slug}= Astro.params;
 
-let projectOverview =
-  "The project at hand is an exciting opportunity for our design agency to collaborate with Orca Magazine to create a compelling and visually stunning digital presence. The primary goal of this project is to develop a modern, user-friendly, and responsive website that effectively showcases.";
+let projectTitle = "string";
+let role = "string";
+let description = "string";
+let category = "string";
+let projectType = "string";
+let projectYear = "string";
+let projectOverview = "string";
+let projectImageUrl = "string";
+let liveSiteUrl = "string";
+let dividerImage = "string";
+let problem = "string";
+let problems = ["string"];
+let solutionOverview = "string";
+let solutionImage = "string";
+let solutionImageUrls = ["string"];
 
-let projectImageUrl =
-  "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291b85b72d764a6885486_64c28c80b4f375fa26ecfb47_Mask%20group-2.webp";
-let liveSiteUrl = "#";
-let dividerImage =
-  "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c294787876ff59087a7509_64c292b41b1edcd3c29ccd19_Mask%20group.webp";
+projects.map((project) => {
+  if (project.slug === slug) {
+    projectTitle = project.projectTitle;
+    role = project.role;
+    projectType = project.projectType;
+    projectYear = project.projectYear;
+    projectOverview = project.projectOverview;
+    projectImageUrl = project.projectImageUrl;
+    liveSiteUrl = project.liveSiteUrl;
+    dividerImage = project.dividerImage;
+    problem = project.problem;
+    problems = project.problems;
+    solutionOverview = project.solutionOverview;
+    solutionImage = project.solutionImage;
+    solutionImageUrls = project.solutionImageUrls;
+  }
+});
 
-let problem =
-  "The project at hand is an exciting opportunity for our design agency to collaborate with Orca Magazine to create a compelling and visually stunning digital presence. The primary goal of this project is to develop a modern, user-friendly, and responsive website that effectively showcases.";
 
-let problems = [
-  "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c2949418d0b9b3d7b6d84f_64c292b3c2a04fadcb884617_Mac.webp",
-  "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c2949a8e9c4d7a6953fdb8_64c292b3134b44ca95e93f18_Frame%20383.webp",
-];
 
-let solutionOverview =
-  "The project at hand is an exciting opportunity for our design agency to collaborate with Orca Magazine to create a compelling and visually stunning digital presence. The primary goal of this project is to develop a modern, user-friendly, and responsive website that effectively showcases.";
 
-let solutionImage =
-  "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c294d4ad31c950619c8353_64c292b30dbd99c655e6fa38_Mask%20group-2.webp";
-let solutionImageUrls = [
-  "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c294d4ad31c950619c8353_64c292b30dbd99c655e6fa38_Mask%20group-2.webp",
-  "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c294d40ad422de67e01421_64c292b3e044a3f4d61108b0_Mask%20group.webp",
-  "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c294d4d0ddbe85f84526c1_64c292b47a03c243d2acd04d_Mask%20group-1.webp",
-];
+// let projectTitle = "Paytime Wallet";
+// let role = "Development";
+// let projectType = "Mobile App";
+// let projectYear = "2023";
+
+// let projectOverview =
+//   "The project at hand is an exciting opportunity for our design agency to collaborate with Orca Magazine to create a compelling and visually stunning digital presence. The primary goal of this project is to develop a modern, user-friendly, and responsive website that effectively showcases.";
+
+// let projectImageUrl =
+//   "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291b85b72d764a6885486_64c28c80b4f375fa26ecfb47_Mask%20group-2.webp";
+// let liveSiteUrl = "#";
+// let dividerImage =
+//   "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c294787876ff59087a7509_64c292b41b1edcd3c29ccd19_Mask%20group.webp";
+
+// let problem =
+//   "The project at hand is an exciting opportunity for our design agency to collaborate with Orca Magazine to create a compelling and visually stunning digital presence. The primary goal of this project is to develop a modern, user-friendly, and responsive website that effectively showcases.";
+
+// let problems = [
+//   "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c2949418d0b9b3d7b6d84f_64c292b3c2a04fadcb884617_Mac.webp",
+//   "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c2949a8e9c4d7a6953fdb8_64c292b3134b44ca95e93f18_Frame%20383.webp",
+// ];
+
+// let solutionOverview =
+//   "The project at hand is an exciting opportunity for our design agency to collaborate with Orca Magazine to create a compelling and visually stunning digital presence. The primary goal of this project is to develop a modern, user-friendly, and responsive website that effectively showcases.";
+
+// let solutionImage =
+//   "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c294d4ad31c950619c8353_64c292b30dbd99c655e6fa38_Mask%20group-2.webp";
+// let solutionImageUrls = [
+//   "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c294d4ad31c950619c8353_64c292b30dbd99c655e6fa38_Mask%20group-2.webp",
+//   "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c294d40ad422de67e01421_64c292b3e044a3f4d61108b0_Mask%20group.webp",
+//   "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c294d4d0ddbe85f84526c1_64c292b47a03c243d2acd04d_Mask%20group-1.webp",
+// ];
 ---
 
 <Layout>
@@ -56,7 +94,7 @@ let solutionImageUrls = [
     <div class="w-layout-blockcontainer main-container w-container">
       <div class="work-container">
         <div class="work-heading-wrapper">
-          <h1 class="work-title" transition:name={`work-title-project1`}>
+          <h1 class="work-title" transition:name={`work-title-${slug}`}>
             {projectTitle}
           </h1>
         </div>
@@ -79,7 +117,7 @@ let solutionImageUrls = [
         </div>
         <div class="project-image-wrapper">
           <img
-            transition:name="work-block-image-project1"
+            transition:name={`work-block-image-${slug}`}
             src={projectImageUrl}
             loading="lazy"
             alt=""
@@ -206,7 +244,8 @@ let solutionImageUrls = [
                   loading="lazy"
                   alt=""
                   class="mail-link-arrow-icon"
-                /></a>
+                /></a
+              >
             </div>
             <div class="dividers-wrapper">
               <div class="left-link-divider"></div>

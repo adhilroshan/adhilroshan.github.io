@@ -15,11 +15,9 @@ collections:
     folder: src/data/projects
     create: true
     fields:
-      - { name: id, label: ID, widget: string }
-      - { name: link, label: Link, widget: string }
-      - { name: alt, label: Alt, widget: string }
-      - { name: imageSrc, label: Image Source, widget: image }
-      - { name: title, label: Title, widget: string }
+      - { name: projectTitle, label: Project Title, widget: string }
+      - { name: slug, label: Slug, widget: string }
+      - { name: role, label: Role, widget: string }
       - { name: description, label: Description, widget: text }
       - {
           name: category,
@@ -27,6 +25,17 @@ collections:
           widget: select,
           options: ["Mobile App", "Web App", "Website", "UI/UX Design"],
         }
+      - { name: projectType, label: Project Type, widget: string }
+      - { name: projectYear, label: Project Year, widget: string }
+      - { name: projectOverview, label: Project Overview, widget: text }
+      - { name: projectImageUrl, label: Project Image Url, widget: image }
+      - { name: liveSiteUrl, label: Live Site Url, widget: string }
+      - { name: dividerImage, label: Divider Image, widget: image }
+      - { name: problem, label: Problem, widget: text }
+      - { name: problems, label: Problems, widget: list }
+      - { name: solutionOverview, label: Solution Overview, widget: text }
+      - { name: solutionImage, label: Solution Image, widget: image }
+      - { name: solutionImageUrls, label: Solution Image Urls, widget: list }
 
   # - name: home
   #   label: Home Page
