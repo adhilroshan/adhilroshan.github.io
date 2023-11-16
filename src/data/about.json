@@ -1,0 +1,70 @@
+{
+  "imageUrl": "/assets/profile-img.webp",
+  "aboutText": "I am Adhil Roshan, a creative designer with a passion for crafting captivating visual experiences. With a keen eye for detail and a deep understanding of design principles, I strive to bring ideas to life through innovative and compelling solutions.",
+  "experienceData": [
+    {
+      "date": "Jan 2015 — Dec 2018",
+      "position": "Creative Designer",
+      "company": "Green Owl",
+      "link": "#"
+    },
+    {
+      "date": "Jan 2015 — Dec 2018",
+      "position": "Creative Designer",
+      "company": "Green Owl",
+      "link": "#"
+    },
+    {
+      "date": "Jan 2015 — Dec 2018",
+      "position": "Creative Designer",
+      "company": "Green Owl",
+      "link": "#"
+    },
+    {
+      "date": "Jan 2015 — Dec 2018",
+      "position": "Creative Designer",
+      "company": "Green Owl",
+      "link": "#"
+    }
+  ],
+  "certificationsData": [
+    {
+      "date": "Jan 2015",
+      "course": "UX Fundamentals Course",
+      "provider": "Udemy",
+      "link": "#"
+    },
+    {
+      "date": "Jan 2014",
+      "course": "User Interaction Design",
+      "provider": "Skill Share",
+      "link": "#"
+    },
+    {
+      "date": "Dec 2013",
+      "course": "Design and Development",
+      "provider": "Udemy",
+      "link": "#"
+    },
+    {
+      "date": "Mar 2012",
+      "course": "Montfort University",
+      "provider": "Microsoft",
+      "link": "#"
+    }
+  ],
+  "helpCategories": [
+    {
+      "items": [
+        "Creative Direction",
+        "Logo and Branding",
+        "User Research",
+        "Adobe XD"
+      ]
+    },
+    {
+      "title": "Web Development",
+      "items": ["WordPress", "Mobile App Designing", "User Interface", "Framer"]
+    }
+  ]
+}
