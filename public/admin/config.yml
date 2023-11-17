@@ -60,13 +60,14 @@ collections:
           - { name: liveSiteUrl, label: Live Site Url, widget: string }
           - { name: dividerImage, label: Divider Image, widget: image }
           - { name: problem, label: Problem, widget: text }
-          - {
-              name: problems,
-              label: Problems Images,
-              widget: list,
-              create: true,
-              fields: { name: problems, label: Image, widget: image },
-            }
+          - name: problems,
+            label: Problems Images
+            widget: list
+            create: true
+            fields:
+              - name: problems
+                label: Image
+                widget: image
           - { name: solutionOverview, label: Solution Overview, widget: text }
           - { name: solutionImage, label: Solution Image, widget: image }
           - {
