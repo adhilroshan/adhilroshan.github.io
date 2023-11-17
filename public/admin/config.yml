@@ -36,36 +36,80 @@ collections:
       - { name: solutionOverview, label: Solution Overview, widget: text }
       - { name: solutionImage, label: Solution Image, widget: image }
       - { name: solutionImageUrls, label: Solution Image Urls, widget: list }
+  - name: projects
+    label: Projects
+    files:
+      - file: "src/data/projects.json"
+        label: "About Page"
+        name: "about"
+        fields:
+          - { name: projectTitle, label: Project Title, widget: string }
+          - { name: slug, label: Slug, widget: string }
+          - { name: role, label: Role, widget: string }
+          - { name: description, label: Description, widget: text }
+          - {
+              name: category,
+              label: Category,
+              widget: select,
+              options: ["Mobile App", "Web App", "Website", "UI/UX Design"],
+            }
+          - { name: projectType, label: Project Type, widget: string }
+          - { name: projectYear, label: Project Year, widget: string }
+          - { name: projectOverview, label: Project Overview, widget: text }
+          - { name: projectImageUrl, label: Project Image Url, widget: image }
+          - { name: liveSiteUrl, label: Live Site Url, widget: string }
+          - { name: dividerImage, label: Divider Image, widget: image }
+          - { name: problem, label: Problem, widget: text }
+          - { name: problems, label: Problems, widget: list }
+          - { name: solutionOverview, label: Solution Overview, widget: text }
+          - { name: solutionImage, label: Solution Image, widget: image }
+          - {
+              name: solutionImageUrls,
+              label: Solution Image Urls,
+              widget: list,
+            }
   - name: about
     label: About
     files:
-      - file: "src/data/about"
+      - file: "src/data/about.json"
         label: "About Page"
         name: "about"
         fields:
           - { name: imageUrl, label: Image Url, widget: string }
           - { name: aboutText, label: About Text, widget: text }
-          - { name: experienceData, label: Experience Data, widget: list, fields: 
-              [
-                { name: date, label: Date, widget: string },
-                { name: position, label: Position, widget: string },
-                { name: company, label: Company, widget: string },
-                { name: link, label: Link, widget: string }
-              ]
+          - {
+              name: experienceData,
+              label: Experience Data,
+              widget: list,
+              fields:
+                [
+                  { name: date, label: Date, widget: string },
+                  { name: position, label: Position, widget: string },
+                  { name: company, label: Company, widget: string },
+                  { name: link, label: Link, widget: string },
+                ],
             }
-          - { name: certificationsData, label: Certifications Data, widget: list, fields: 
-              [
-                { name: date, label: Date, widget: string },
-                { name: course, label: Course, widget: string },
-                { name: provider, label: Provider, widget: string },
-                { name: link, label: Link, widget: string }
-              ]
+          - {
+              name: certificationsData,
+              label: Certifications Data,
+              widget: list,
+              fields:
+                [
+                  { name: date, label: Date, widget: string },
+                  { name: course, label: Course, widget: string },
+                  { name: provider, label: Provider, widget: string },
+                  { name: link, label: Link, widget: string },
+                ],
             }
-          - { name: helpCategories, label: Help Categories, widget: list, fields: 
-              [
-                { name: items, label: Items, widget: list },
-                { name: title, label: Title, widget: string }
-              ]
+          - {
+              name: helpCategories,
+              label: Help Categories,
+              widget: list,
+              fields:
+                [
+                  { name: items, label: Items, widget: list },
+                  { name: title, label: Title, widget: string },
+                ],
             }
 
   # - name: home
