@@ -42,84 +42,172 @@ collections:
       - file: "src/data/projects.json"
         label: "Project Page"
         name: "project"
+        widget: list
+        create: true
+        media_library:
+          folder_support: true
         fields:
-          - { name: projectTitle, label: Project Title, widget: string }
-          - { name: slug, label: Slug, widget: string }
-          - { name: role, label: Role, widget: string }
-          - { name: description, label: Description, widget: text }
-          - {
-              name: category,
-              label: Category,
-              widget: select,
-              options: ["Mobile App", "Web App", "Website", "UI/UX Design"],
-            }
-          - { name: projectType, label: Project Type, widget: string }
-          - { name: projectYear, label: Project Year, widget: string }
-          - { name: projectOverview, label: Project Overview, widget: text }
-          - { name: projectImageUrl, label: Project Image Url, widget: image }
-          - { name: liveSiteUrl, label: Live Site Url, widget: string }
-          - { name: dividerImage, label: Divider Image, widget: image }
-          - { name: problem, label: Problem, widget: text }
-          - name: problems,
-            label: Problems Images
+          - name: project
+            label: Project
             widget: list
-            create: true
             fields:
-              - name: problems
-                label: Image
+              - name: id
+                label: ID
+                widget: string
+              - name: projectTitle
+                label: Project Title
+                widget: string
+              - name: description
+                label: Description
+                widget: string
+              - name: role
+                label: Role
+                widget: string
+              - name: category
+                label: Category
+                widget: string
+                options: ["Mobile App", "Web App", "Website", "UI/UX Design"]
+              - name: projectType
+                label: Project Type
+                widget: string
+              - name: projectYear
+                label: Project Year
+                widget: string
+              - name: projectOverview
+                label: Project Overview
+                widget: string
+              - name: projectImageUrl
+                label: Project Image Url
                 widget: image
-          - { name: solutionOverview, label: Solution Overview, widget: text }
-          - { name: solutionImage, label: Solution Image, widget: image }
-          - {
-              name: solutionImageUrls,
-              label: Solution Image Urls,
-              widget: list,
-              types: image,
-            }
-  - name: about
-    label: About
-    files:
+              - name: liveSiteUrl
+                label: Live Site Url
+                widget: string
+              - name: dividerImage
+                label: Divider Image
+                widget: image
+              - name: problem
+                label: Problem
+                widget: string
+              - name: problems
+                label: Problems
+                widget: list
+                fields:
+                  - name: problems
+                    label: Image
+                    widget: image
+              - name: solutionOverview
+                label: Solution Overview
+                widget: string
+              - name: solutionImage
+                label: Solution Image
+                widget: image
+              - name: solutionImageUrls
+                label: Solution Image Urls
+                widget: list
+                fields:
+                  - name: solutionImageUrls
+                    label: Image
+                    widget: image
       - file: "src/data/about.json"
         label: "About Page"
+        widget: list
         name: "about"
+        create: true
+        media_library:
+          folder_support: true
         fields:
-          - { name: imageUrl, label: Image Url, widget: string }
-          - { name: aboutText, label: About Text, widget: text }
-          - {
-              name: experienceData,
-              label: Experience Data,
-              widget: list,
-              fields:
-                [
-                  { name: date, label: Date, widget: string },
-                  { name: position, label: Position, widget: string },
-                  { name: company, label: Company, widget: string },
-                  { name: link, label: Link, widget: string },
-                ],
-            }
-          - {
-              name: certificationsData,
-              label: Certifications Data,
-              widget: list,
-              fields:
-                [
-                  { name: date, label: Date, widget: string },
-                  { name: course, label: Course, widget: string },
-                  { name: provider, label: Provider, widget: string },
-                  { name: link, label: Link, widget: string },
-                ],
-            }
-          - {
-              name: helpCategories,
-              label: Help Categories,
-              widget: list,
-              fields:
-                [
-                  { name: items, label: Items, widget: list },
-                  { name: title, label: Title, widget: string },
-                ],
-            }
+          - name: imageUrl
+            label: Image Url
+            widget: string
+          - name: aboutText
+            label: About Text
+            widget: text
+          - name: experienceData,
+            label: Experience Data,
+            widget: list,
+            fields:
+              - name: date
+                label: Date
+                widget: string
+              - name: position
+                label: Position
+                widget: string
+              - name: company
+                label: Company
+                widget: string
+              - name: link
+                label: Link
+                widget: string
+          - name: certificationsData,
+            label: Certifications Data,
+            widget: list,
+            fields:
+              - name: date
+                label: Date
+                widget: string
+              - name: course
+                label: Course
+                widget: string
+              - name: provider
+                label: Provider
+                widget: string
+              - name: link
+                label: Link
+                widget: string
+          - name: helpCategories,
+            label: Help Categories,
+            widget: list,
+            fields:
+              - name: items
+                label: Items
+                widget: list
+              - name: title
+                label: Title
+                widget: string
 
+  # - name: about
+  #   label: About
+  #   files:
+  #     - file: "src/data/about.json"
+  #       label: "About Page"
+  #       name: "about"
+  #       fields:
+  #         - { name: imageUrl, label: Image Url, widget: string }
+  #         - { name: aboutText, label: About Text, widget: text }
+  #         - {
+  #             name: experienceData,
+  #             label: Experience Data,
+  #             widget: list,
+  #             fields:
+  #               [
+  #                 { name: date, label: Date, widget: string },
+  #                 { name: position, label: Position, widget: string },
+  #                 { name: company, label: Company, widget: string },
+  #                 { name: link, label: Link, widget: string },
+  #               ],
+  #           }
+  #         - {
+  #             name: certificationsData,
+  #             label: Certifications Data,
+  #             widget: list,
+  #             fields:
+  #               [
+  #                 { name: date, label: Date, widget: string },
+  #                 { name: course, label: Course, widget: string },
+  #                 { name: provider, label: Provider, widget: string },
+  #                 { name: link, label: Link, widget: string },
+  #               ],
+  #           }
+  #         - {
+  #             name: helpCategories,
+  #             label: Help Categories,
+  #             widget: list,
+  #             fields:
+  #               [
+  #                 { name: items, label: Items, widget: list },
+  #                 { name: title, label: Title, widget: string },
+  #               ],
+  #           }
   # - name: home
   #   label: Home Page
   #   files:
