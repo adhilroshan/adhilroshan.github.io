@@ -1,37 +1,37 @@
 ---
 import projects from "../../data/projects.json"
-let projectn = [
-  {
-    id: "project1",
-    link: "/project/paytime-wallet",
-    alt: "Paytime Wallet",
-    imageSrc:
-      "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291b85b72d764a6885486_64c28c80b4f375fa26ecfb47_Mask%20group-2.webp",
-    imageSizes:
-      "(max-width: 479px) 100vw, (max-width: 767px) 88vw, (max-width: 991px) 540px, 57vw",
-    imageSrcSet:
-      "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291b85b72d764a6885486_64c28c80b4f375fa26ecfb47_Mask%20group-2-p-500.webp   500w, https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291b85b72d764a6885486_64c28c80b4f375fa26ecfb47_Mask%20group-2-p-800.webp   800w, https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291b85b72d764a6885486_64c28c80b4f375fa26ecfb47_Mask%20group-2-p-1080.webp 1080w, https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291b85b72d764a6885486_64c28c80b4f375fa26ecfb47_Mask%20group-2-p-1600.webp 1600w, https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291b85b72d764a6885486_64c28c80b4f375fa26ecfb47_Mask%20group-2-p-2000.webp 2000w, https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291b85b72d764a6885486_64c28c80b4f375fa26ecfb47_Mask%20group-2.webp        2496w", // Add your image srcset here
-    title: "Paytime Wallet",
-    description:
-      "A web project that brings together luxury, elegance, and sophistication.",
-    category: "Mobile App",
-  },
-  {
-    id: "project2",
-    link: "/project/beyond-energy",
-    alt: "Beyond Energy",
-    imageSrc:
-      "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291dbd0ddbe85f84129a7_64c28c7f826829e08847e211_Mask%20group-3.webp",
-    imageSizes:
-      "(max-width: 479px) 100vw, (max-width: 767px) 88vw, (max-width: 991px) 540px, 57vw",
-    imageSrcSet:
-      "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291dbd0ddbe85f84129a7_64c28c7f826829e08847e211_Mask%20group-3-p-500.webp   500w,                          https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291dbd0ddbe85f84129a7_64c28c7f826829e08847e211_Mask%20group-3-p-800.webp   800w,                          https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291dbd0ddbe85f84129a7_64c28c7f826829e08847e211_Mask%20group-3-p-1080.webp 1080w,                          https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291dbd0ddbe85f84129a7_64c28c7f826829e08847e211_Mask%20group-3-p-1600.webp 1600w,                          https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291dbd0ddbe85f84129a7_64c28c7f826829e08847e211_Mask%20group-3-p-2000.webp 2000w,                          https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291dbd0ddbe85f84129a7_64c28c7f826829e08847e211_Mask%20group-3.webp        2496w", // Add your image srcset here
-    title: "Beyond Energy",
-    description:
-      "A web project that brings together luxury, elegance, and sophistication.",
-    category: "Branding",
-  },
-];
+// let projectn = [
+//   {
+//     id: "project1",
+//     link: "/project/paytime-wallet",
+//     alt: "Paytime Wallet",
+//     imageSrc:
+//       "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291b85b72d764a6885486_64c28c80b4f375fa26ecfb47_Mask%20group-2.webp",
+//     imageSizes:
+//       "(max-width: 479px) 100vw, (max-width: 767px) 88vw, (max-width: 991px) 540px, 57vw",
+//     imageSrcSet:
+//       "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291b85b72d764a6885486_64c28c80b4f375fa26ecfb47_Mask%20group-2-p-500.webp   500w, https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291b85b72d764a6885486_64c28c80b4f375fa26ecfb47_Mask%20group-2-p-800.webp   800w, https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291b85b72d764a6885486_64c28c80b4f375fa26ecfb47_Mask%20group-2-p-1080.webp 1080w, https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291b85b72d764a6885486_64c28c80b4f375fa26ecfb47_Mask%20group-2-p-1600.webp 1600w, https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291b85b72d764a6885486_64c28c80b4f375fa26ecfb47_Mask%20group-2-p-2000.webp 2000w, https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291b85b72d764a6885486_64c28c80b4f375fa26ecfb47_Mask%20group-2.webp        2496w", // Add your image srcset here
+//     title: "Paytime Wallet",
+//     description:
+//       "A web project that brings together luxury, elegance, and sophistication.",
+//     category: "Mobile App",
+//   },
+//   {
+//     id: "project2",
+//     link: "/project/beyond-energy",
+//     alt: "Beyond Energy",
+//     imageSrc:
+//       "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291dbd0ddbe85f84129a7_64c28c7f826829e08847e211_Mask%20group-3.webp",
+//     imageSizes:
+//       "(max-width: 479px) 100vw, (max-width: 767px) 88vw, (max-width: 991px) 540px, 57vw",
+//     imageSrcSet:
+//       "https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291dbd0ddbe85f84129a7_64c28c7f826829e08847e211_Mask%20group-3-p-500.webp   500w,                          https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291dbd0ddbe85f84129a7_64c28c7f826829e08847e211_Mask%20group-3-p-800.webp   800w,                          https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291dbd0ddbe85f84129a7_64c28c7f826829e08847e211_Mask%20group-3-p-1080.webp 1080w,                          https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291dbd0ddbe85f84129a7_64c28c7f826829e08847e211_Mask%20group-3-p-1600.webp 1600w,                          https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291dbd0ddbe85f84129a7_64c28c7f826829e08847e211_Mask%20group-3-p-2000.webp 2000w,                          https://uploads-ssl.webflow.com/64aecd7ccd5ba11a8a5910ca/64c291dbd0ddbe85f84129a7_64c28c7f826829e08847e211_Mask%20group-3.webp        2496w", // Add your image srcset here
+//     title: "Beyond Energy",
+//     description:
+//       "A web project that brings together luxury, elegance, and sophistication.",
+//     category: "Branding",
+//   },
+// ];
 ---
 
 <section style="" class="work-section">

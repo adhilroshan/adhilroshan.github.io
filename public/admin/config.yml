@@ -10,32 +10,6 @@ media_folder: "public/uploads"
 public_folder: "/uploads"
 
 collections:
-  # - name: projects
-  #   label: Projects
-  #   folder: src/data/projects
-  #   create: true
-  #   fields:
-  #     - { name: projectTitle, label: Project Title, widget: string }
-  #     - { name: slug, label: Slug, widget: string }
-  #     - { name: role, label: Role, widget: string }
-  #     - { name: description, label: Description, widget: text }
-  #     - {
-  #         name: category,
-  #         label: Category,
-  #         widget: select,
-  #         options: ["Mobile App", "Web App", "Website", "UI/UX Design"],
-  #       }
-  #     - { name: projectType, label: Project Type, widget: string }
-  #     - { name: projectYear, label: Project Year, widget: string }
-  #     - { name: projectOverview, label: Project Overview, widget: text }
-  #     - { name: projectImageUrl, label: Project Image Url, widget: image }
-  #     - { name: liveSiteUrl, label: Live Site Url, widget: string }
-  #     - { name: dividerImage, label: Divider Image, widget: image }
-  #     - { name: problem, label: Problem, widget: text }
-  #     - { name: problems, label: Problems, widget: list }
-  #     - { name: solutionOverview, label: Solution Overview, widget: text }
-  #     - { name: solutionImage, label: Solution Image, widget: image }
-  #     - { name: solutionImageUrls, label: Solution Image Urls, widget: list }
   - name: projects
     label: Projects
     files:
@@ -51,9 +25,9 @@ collections:
             label: Project
             widget: list
             fields:
-              - name: id
-                label: ID
-                widget: string
+              # - name: id
+              #   label: ID
+              #   widget: string
               - name: projectTitle
                 label: Project Title
                 widget: string
@@ -67,9 +41,9 @@ collections:
                 label: Category
                 widget: string
                 options: ["Mobile App", "Web App", "Website", "UI/UX Design"]
-              - name: projectType
-                label: Project Type
-                widget: string
+              # - name: projectType
+              #   label: Project Type
+              #   widget: string
               - name: projectYear
                 label: Project Year
                 widget: string
